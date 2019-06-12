@@ -52,7 +52,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <h2>Gym and Code habit builder</h2>
+        <h2 style={{textAlign:'center'}}>Habit Builder</h2>
         <Wrapper>
           {Array.from(Array(100).keys(), n => n + 1).map((i, index) => {
             return (
@@ -64,8 +64,9 @@ class App extends Component {
                     .format("dd D MMM")}
                 </Date>
                 <Markers>
-                  <Inner>Code</Inner>
-                  <Inner>Gym</Inner>
+                <Inner>🧘‍♂️</Inner>
+                  <Inner>💻</Inner>
+                  <Inner>🏋️‍♂️</Inner>
                 </Markers>
               </Box>
             );
