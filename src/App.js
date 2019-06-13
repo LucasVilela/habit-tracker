@@ -15,7 +15,6 @@ const Box = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-
 `;
 
 const Number = styled.div`
@@ -33,26 +32,26 @@ const Markers = styled.div`
   height: 30px;
   box-sizing: border-box;
   p {
-    border: 1px solid black;
+    border: 1px 0px 0px 0px solid black;
     margin: 0;
   }
 `;
 
 const Inner = styled.div`
-   border: 0.01em solid black;
-   width:100%;
-   text-align:center;
-   font-size:10px;
-   display:flex;
-   justify-content:center;
-   align-items:center;
+  border: 0.01em solid black;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <h2 style={{textAlign:'center'}}>Habit Builder</h2>
+        <h2 style={{ textAlign: "center" }}>Habit Builder</h2>
         <Wrapper>
           {Array.from(Array(100).keys(), n => n + 1).map((i, index) => {
             return (
@@ -60,13 +59,17 @@ class App extends Component {
                 <Number>Day {index + 1}</Number>
                 <Date>
                   {moment()
-                    .add(index+1, "days")
+                    .add(index + 1, "days")
                     .format("dd D MMM")}
                 </Date>
                 <Markers>
-                <Inner>🧘‍♂️</Inner>
-                  <Inner>💻</Inner>
-                  <Inner>🏋️‍♂️</Inner>
+
+                    <Inner>📖</Inner>
+                    <Inner>🧘‍♂️</Inner>
+
+                    <Inner>💻</Inner>
+                    <Inner>🏋️‍♂️</Inner>
+
                 </Markers>
               </Box>
             );
